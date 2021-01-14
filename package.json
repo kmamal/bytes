@@ -1,0 +1,17 @@
+{
+  "version": "0.0.0",
+  "name": "@xyz/bytes",
+  "description": "bytes",
+  "repository": {
+    "type": "git",
+    "url": "git:repos/bytes"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "test": "./scripts/run-tests.sh"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "@xyz/testing": "git:repos/testing#semver:*"
+  }
+}
