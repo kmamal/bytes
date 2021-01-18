@@ -12,7 +12,8 @@ const normalize = (desc) => {
 		error.desc = desc
 		throw error
 	}
-	return { ...desc, ...desc.type }
+	const type_contents = typeof desc.type !== 'string' ? desc.type : {}
+	return { ...desc, ...type_contents }
 }
 
 module.exports = {
