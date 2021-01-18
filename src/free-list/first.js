@@ -52,7 +52,7 @@ class FreeList {
 			curr = this._readNext(curr)
 		}
 
-		throw new Error('out of memory')
+		throw new Error("out of memory")
 	}
 
 	free (addr) {

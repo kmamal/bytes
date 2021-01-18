@@ -26,7 +26,7 @@ const countUInt = (value) => {
 		if (value < POWERS[i]) { return i }
 	}
 
-	const error = new Error('invalid value')
+	const error = new Error("invalid value")
 	error.value = value
 	error.min = 0
 	error.max = MAX_VALUE
@@ -93,7 +93,7 @@ const readBigUIntVarBE = (buffer, _index) => {
 
 const writeUIntVarLE = (buffer, _index, _value) => {
 	if (_value < 0 || MAX_VALUE < _value) {
-		const error = new Error('invalid value')
+		const error = new Error("invalid value")
 		error.value = _value
 		error.min = 0
 		error.max = MAX_VALUE
@@ -118,7 +118,7 @@ const writeUIntVarLE = (buffer, _index, _value) => {
 
 const writeUIntVarBE = (buffer, _index, _value) => {
 	if (_value < 0 || MAX_VALUE < _value) {
-		const error = new Error('invalid value')
+		const error = new Error("invalid value")
 		error.value = _value
 		error.min = 0
 		error.max = MAX_VALUE
@@ -148,7 +148,7 @@ const writeUIntVarBE = (buffer, _index, _value) => {
 
 const writeBigUIntVarLE = (buffer, _index, _value) => {
 	if (_value < 0n) {
-		const error = new Error('invalid value')
+		const error = new Error("invalid value")
 		error.value = _value
 		error.min = 0n
 		error.max = MAX_VALUE
@@ -173,7 +173,7 @@ const writeBigUIntVarLE = (buffer, _index, _value) => {
 
 const writeBigUIntVarBE = (buffer, _index, _value) => {
 	if (_value < 0n) {
-		const error = new Error('invalid value')
+		const error = new Error("invalid value")
 		error.value = _value
 		error.min = 0n
 		error.max = MAX_VALUE
@@ -184,7 +184,7 @@ const writeBigUIntVarBE = (buffer, _index, _value) => {
 	let value = _value
 	let i = 1
 
-	while (value > getBigPower(i)) {
+	while (value >= getBigPower(i)) {
 		i++
 	}
 

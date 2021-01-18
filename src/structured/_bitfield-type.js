@@ -16,7 +16,7 @@ const makeDescription = (fields) => {
 		const { name, bits } = field
 
 		if (!Number.isInteger(bits) || bits < 1) {
-			const error = new Error('bad bits')
+			const error = new Error("bad bits")
 			error.field = field
 			throw error
 		}

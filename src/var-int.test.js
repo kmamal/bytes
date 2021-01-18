@@ -1,5 +1,4 @@
 const { test } = require('@xyz/testing')
-const { countUInt } = require('./var-int')
 const V = require('./var-int')
 
 const randInt = () => {
@@ -8,7 +7,7 @@ const randInt = () => {
 	return Math.floor(base * 2 ** exp)
 }
 
-const N = 100
+const N = 1000
 
 const makeTest = (name, read, write, count, random, max_size) => {
 	test(`low-level.var-int.${name}`, (t) => {
@@ -35,7 +34,7 @@ const makeTest = (name, read, write, count, random, max_size) => {
 	})
 }
 
-makeTest('uint-be', V.readUIntVarBE, V.writeUIntVarBE, V.countUInt, randInt, 6)
-makeTest('uint-le', V.readUIntVarLE, V.writeUIntVarLE, V.countUInt, randInt, 6)
-makeTest('big-uint-be', V.readBigUIntVarBE, V.writeBigUIntVarBE, V.countBigUInt, () => BigInt(randInt()), 6)
-makeTest('big-uint-le', V.readBigUIntVarLE, V.writeBigUIntVarLE, V.countBigUInt, () => BigInt(randInt()), 6)
+makeTest("uint-be", V.readUIntVarBE, V.writeUIntVarBE, V.countUInt, randInt, 6)
+makeTest("uint-le", V.readUIntVarLE, V.writeUIntVarLE, V.countUInt, randInt, 6)
+makeTest("big-uint-be", V.readBigUIntVarBE, V.writeBigUIntVarBE, V.countBigUInt, () => BigInt(randInt()), 6)
+makeTest("big-uint-le", V.readBigUIntVarLE, V.writeBigUIntVarLE, V.countBigUInt, () => BigInt(randInt()), 6)

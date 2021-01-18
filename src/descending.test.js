@@ -10,7 +10,7 @@ const equalReversed = (t, a, b) => {
 	}
 }
 
-test('low-level.descending', (t) => {
+test("low-level.descending", (t) => {
 	const a = Buffer.alloc(16)
 	const b = Buffer.alloc(16)
 	const c = new Descending(b)

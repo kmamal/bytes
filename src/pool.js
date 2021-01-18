@@ -19,7 +19,7 @@ class Pool {
 
 	alloc () {
 		const addr = this._readFirst()
-		if (addr === -1) { throw new Error('out of memory') }
+		if (addr === -1) { throw new Error("out of memory") }
 
 		const next = this._readNext(addr)
 		this._writeFirst(next)
