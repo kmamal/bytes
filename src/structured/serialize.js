@@ -1,6 +1,6 @@
-const T = require('@xyz/bytes/structured/primitive-types')
-const { makeStructType } = require('@xyz/bytes/structured/struct-type')
-const { makeArrayType } = require('@xyz/bytes/structured/array-type')
+const T = require('@kmamal/bytes/structured/primitive-types')
+const { makeStructType } = require('@kmamal/bytes/structured/struct-type')
+const { makeArrayType } = require('@kmamal/bytes/structured/array-type')
 
 const default_nested_types = {
 	struct: (description, nested_types) => {

@@ -1,4 +1,4 @@
-const { test } = require('@xyz/testing')
+const { test } = require('@kmamal/testing')
 const P = require('./primitive-types')
 const { makeStructType } = require('./struct-type')
 const { makeArrayType } = require('./array-type')

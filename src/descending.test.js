@@ -1,4 +1,4 @@
-const { test } = require('@xyz/testing')
+const { test } = require('@kmamal/testing')
 const { Descending } = require('./descending')
 
 const equalReversed = (t, a, b) => {

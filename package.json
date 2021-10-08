@@ -1,19 +1,30 @@
 {
   "version": "0.0.6",
-  "name": "@xyz/bytes",
+  "name": "@kmamal/bytes",
   "description": "bytes",
   "repository": {
     "type": "git",
-    "url": "git:repos/bytes"
+    "url": "git@github.com:kmamal/bytes.git"
   },
   "exports": {
-    "./": "./src/"
+    "./free-list/first": "./src/free-list/first.js",
+    "./descending": "./src/descending.js",
+    "./pool": "./src/pool.js",
+    "./structured/serialize": "./src/structured/serialize.js",
+    "./structured/array-type": "./src/structured/array-type.js",
+    "./structured/struct-type": "./src/structured/struct-type.js",
+    "./structured/_bitfield-type": "./src/structured/_bitfield-type.js",
+    "./structured/class": "./src/structured/class.js",
+    "./structured/description": "./src/structured/description.js",
+    "./structured/primitive-types": "./src/structured/primitive-types.js",
+    "./var-int": "./src/var-int.js"
   },
   "scripts": {
-    "test": "./scripts/run-tests.sh"
+    "test": "./scripts/run-tests.sh",
+    "update-exports": "./scripts/update-exports.sh"
   },
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@xyz/testing": "git:repos/testing#semver:*"
+    "@kmamal/testing": "^0.0.11"
   }
 }
